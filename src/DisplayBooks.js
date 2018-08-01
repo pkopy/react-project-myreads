@@ -19,9 +19,10 @@ class DisplayBooks extends Component {
                   </div>
                   <div className="book-title" >{book.title}</div>
                   <div className="book-authors">
-                    {book.authors.map((author, index) => (
+                    {(book.authors)?book.authors.map((author, index) => (
                       <p key={index}>{author}</p>
-                    ))}
+                    )) : <p>No authors</p>
+                    }
                   </div>
                 </div>
               </li>
