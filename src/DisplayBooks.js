@@ -18,7 +18,7 @@ class DisplayBooks extends Component {
               <li key={book.id}>
                 <div className="book">
                   <div className="book-top">
-                    <div className="book-cover" style={(book.imageLinks)?{ backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '128px', height: '188px', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%' }:{}} > </div>
+                    <div className="book-cover" style={(book.imageLinks)?{ backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '128px', height: '188px', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%' }:{backgroundColor:'gray', width: '128px', height: '188px'}} > </div>
                     <div className="book-shelf-changer">
                       <BookShelfChanger book={book}
                       update={update}

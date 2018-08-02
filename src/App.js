@@ -17,15 +17,7 @@ class BooksApp extends React.Component {
     })
   }
 
-  searchBooks = (text) => {
-    BooksAPI.search(text).then((books) => {
-          console.log(books)
-          this.setState({ books })
-        }).catch(() => {
-          this.setState({books:[]})
-        })
-  }
-
+  
   
   changeShelf = (book, shelf) => {
     book.shelf = shelf

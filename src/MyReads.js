@@ -9,7 +9,6 @@ class MyReads extends Component {
 
 	render () {
 		const { books, update, myBooks } = this.props;
-		// const {} = this.state;
 	
     	return (
         	<div className="list-books">
