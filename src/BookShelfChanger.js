@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
-import Books from './App'
-import { Link } from 'react-router-dom'
+
 
 class BookShelfChanger extends Component {
 
@@ -12,11 +11,7 @@ class BookShelfChanger extends Component {
 	render () {
     
     const { book, myBooks } = this.props;
-    // console.log(myBooks)
-        // if(books.includes(book)) {console.log('tadam')}
-        // books.filter((b) => ())
-        // let matchBook;
-        // matchBook = myBooks.filter((b) => (b.id === book.id) ? book.shelf = b.shelf : book.shelf = 'none')
+    
         if(myBooks && myBooks.filter((b) => (b.id === book.id)).length > 0){
             book.shelf = myBooks.filter((b) => (b.id === book.id))[0].shelf
         }

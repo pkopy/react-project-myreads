@@ -7,8 +7,10 @@ class DisplayBooks extends Component {
     }
     
     render () {
-      console.log(this.props.books)
     const { books, update, myBooks } = this.props;
+        if(this.props.books.length === 0){
+          
+        }
         return (
             <ol className="books-grid">
             {books.map((book) => (
@@ -16,7 +18,7 @@ class DisplayBooks extends Component {
               <li key={book.id}>
                 <div className="book">
                   <div className="book-top">
-                    <div className="book-cover" style={{ backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '128px', height: '188px' }}> </div>
+                    <div className="book-cover" style={(book.imageLinks)?{ backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '128px', height: '188px', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%' }:{}} > </div>
                     <div className="book-shelf-changer">
                       <BookShelfChanger book={book}
                       update={update}
