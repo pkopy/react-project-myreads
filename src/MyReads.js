@@ -8,7 +8,7 @@ class MyReads extends Component {
 	}
 
 	render () {
-		const { books, update } = this.props;
+		const { books, update, myBooks } = this.props;
 		// const {} = this.state;
 	
     	return (
@@ -21,7 +21,8 @@ class MyReads extends Component {
           			<div className="bookshelf-books">
                         <DisplayBooks 
                         books={books.filter((book) => book.shelf ==='currentlyReading')}
-                        update={update}
+						update={update}
+						myBooks={myBooks}
                         />
           			</div>
           	    </div>

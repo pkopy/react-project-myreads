@@ -37,7 +37,7 @@ class SearchBooks extends Component {
   render() {
     // const { books,  onChangeSearchPage } = this.props;
     const { books } = this.state;
-    const {update} = this.props;
+    const {update, myBooks} = this.props;
     // let showingBooks
     // if (query) {
     //   const match = new RegExp(escapeRegExp(this.state.query), 'i')
@@ -77,6 +77,7 @@ class SearchBooks extends Component {
         </div>
         <div className="search-books-results">
           <DisplayBooks 
+            myBooks={myBooks}
             books={books}
             update={update}
             />        
